@@ -87,8 +87,12 @@ namespace Game10003
             // Body
             Draw.FillColor = sheepColors[0];
             Draw.Rectangle(x + 50, y + 50, 350, 175);
-            DrawLegs(x + 60, y + 175, sheepColors);
-            DrawLegs(x + 325, y + 175, sheepColors);
+            float xOffset = 60;
+            for (int i = 0; i < 2; i++)
+            {
+                DrawLegs(x + xOffset, y + 175, sheepColors);
+                xOffset += 325 - 60;
+            }
         }
     }
 }
