@@ -27,15 +27,18 @@ namespace Game10003
         /// </summary>
         public void Update()
         {
-            Window.ClearBackground(Color.OffWhite);
+            Window.ClearBackground(Color.Cyan);
+            Draw.FillColor = Color.Green;
+            Draw.Rectangle(0 - 1, 400, 602, 201);
             drawSheep(100, 150);
         }
 
         // Draw sheep legs
         void drawLegs(float x, float y)
         {
+            Color whiteToRandom = Color.White;
             Draw.LineSize = 0;
-            Draw.FillColor = Color.White;
+            Draw.FillColor = whiteToRandom;
             Draw.Rectangle(x, y, 65, 150);
             Color feet = new Color(80, 62, 62);
             Draw.FillColor = feet;
@@ -47,9 +50,10 @@ namespace Game10003
         void drawSheep(float x, float y)
         // Draw sheep
         {
+            Color whiteToRandom = Color.White;
             Draw.LineSize = 0;
             // Head
-            Draw.FillColor = Color.White;
+            Draw.FillColor = whiteToRandom;
             Draw.Square(x, y, 100);
             Draw.LineSize = 0;
             // Face
@@ -59,7 +63,7 @@ namespace Game10003
             // Eye
             Draw.FillColor = Color.Black;
             Draw.Square(x - 5, y + 30, 10);
-            Draw.FillColor= Color.White;
+            Draw.FillColor= whiteToRandom;
             Draw.Square(x, y + 30, 10);
             // Body
             Draw.Rectangle(x + 50, y + 50, 350, 175);
