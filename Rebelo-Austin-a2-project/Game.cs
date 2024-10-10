@@ -30,7 +30,7 @@ namespace Game10003
         {
             // Colours in order are white, black, beige, dark brown
             Color[] sheepColors = [Color.White, Color.Black, new Color(184, 159, 137), new Color(80, 62, 62)];
-            
+
 
             Window.ClearBackground(Color.Cyan);
             // Change colors in array
@@ -58,7 +58,7 @@ namespace Game10003
 
         // Draw sheep legs
         void DrawLegs(float x, float y, Color[] sheepColors)
-        { 
+        {
             Draw.LineSize = 0;
             Draw.FillColor = sheepColors[0];
             Draw.Rectangle(x, y, 65, 150);
@@ -68,7 +68,7 @@ namespace Game10003
 
 
         // Function to call a sheep drawing
-        void DrawSheep(float x, float y,Color[] sheepColors)
+        void DrawSheep(float x, float y, Color[] sheepColors)
         // Draw sheep
         {
             Draw.LineSize = 0;
